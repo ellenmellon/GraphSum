@@ -1,7 +1,7 @@
 # GraphSum
 
 
-This repo contains code and data for the paper: [Extracting Summary Knowledge Graphs from Long Documents](https://arxiv.org/abs/2009.09162).
+This repo contains the data and code for the G2G model in the paper: [Extracting Summary Knowledge Graphs from Long Documents](https://arxiv.org/abs/2009.09162). The other baseline TTG is simply based on [BertSumExt](https://github.com/nlpyang/PreSumm).
 
 
 ## Environment Setup
