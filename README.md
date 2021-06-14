@@ -9,7 +9,7 @@ This code is tested on python 3.6.9 and transformer 3.0.2. You would also need t
 
 
 ## Data
-Download and unzip the data from [this link](). Put the unzipped folder named as `./data` parallel with `./src`. You should see four subfolders under `./data/json`, corresponding to four data splits as described in the paper. <br>
+Download and unzip the data from [this link](https://drive.google.com/file/d/1cGYHnsm6Frq4lp0pBTwU5xsQdx0wa5T8/view?usp=sharing). Put the unzipped folder named as `./data` parallel with `./src`. You should see four subfolders under `./data/json`, corresponding to four data splits as described in the paper. <br>
 
 Under each subfolder, the json file contains all document full texts as well as the summarized graphs obtained from the abstract, organized by the document keys. Except for the test split, other three data splits have their summarized graphs obtained by running [DyGIE++](https://github.com/dwadden/dygiepp) on the abstract. The test set have manually annotated summarized graphs from SciERC dataset.  <br>
 
