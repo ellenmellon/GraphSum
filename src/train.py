@@ -111,6 +111,7 @@ valid_fnames = get_all_feature_fnames(valid_data_path)
 random.shuffle(train_fnames)
 n_train_graphs = args.n_train_graphs_to_load_per_time
 train_fnames_list = [train_fnames[i*n_train_graphs:(i+1)*n_train_graphs] for i in range(int(len(train_fnames)/n_train_graphs)+1)]
+train_fnames_list = [l for l in train_fnames_list if len(l) > 0]
 
 valid_adj_list, valid_features_list, valid_labels_list, valid_r_labels_list, valid_token_ids_list, valid_types_list, valid_types2_list, included_valid_fnames = load_data(valid_fnames, 
                                                                                                            tokenizer=tokenizer, 
@@ -185,7 +186,7 @@ class TrainDataloader():
                 self.train_types2_list = train_types2_list
                 self.list_idx = (self.list_idx+1)%len(train_fnames_list)
                 self.idx = 0
-
+            
             self.curr = (self.train_features_list[self.idx], 
                          self.train_adj_list[self.idx], 
                          self.train_labels_list[self.idx], 
