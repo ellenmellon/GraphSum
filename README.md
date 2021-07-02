@@ -9,7 +9,7 @@ This code is tested on python 3.6.9, transformer 3.0.2 and pytorch 1.7.0. You wo
 
 
 ## Data
-Download and unzip the data from [this link](https://drive.google.com/file/d/1cGYHnsm6Frq4lp0pBTwU5xsQdx0wa5T8/view?usp=sharing). Put the unzipped folder named as `./data` parallel with `./src`. You should see four subfolders under `./data/json`, corresponding to four data splits as described in the paper. <br>
+Run `bash data.sh` that will create a folder `./data` parallel with `./src` then download and unzip the data from [this link](https://drive.google.com/file/d/1cGYHnsm6Frq4lp0pBTwU5xsQdx0wa5T8/view?usp=sharing). You should see four subfolders under `./data/json`, corresponding to four data splits as described in the paper. <br>
 
 Under each subfolder, the json file contains all document full texts, abstracts as well as the summarized graphs obtained from the abstract, organized by the document keys. Each full text consists of a list of sections. Each summarized graph contains a list of entity and relation mentions. Except for the test split, other three data splits have their summarized graphs obtained by running [DyGIE++](https://github.com/dwadden/dygiepp) on the abstract. The test set have manually annotated summarized graphs from SciERC dataset. The format of the graph follows the output of DyGIE++, where each entity mention in a section is represented by (start token id, end token id, entity type) and each relation mention is represented by (start token id of entity 1, end token id of entity 1, start token id of entity 2, end token id of entity 2, relation type). The graph also contains a list of coreferential entity mentions. <br>
 
